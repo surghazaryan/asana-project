@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.Register-Form {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 165));
+    height: 100vh;
+}
+
+.register-parent-input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 420px;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.register-inp-label {
+    color: red;
+}
+
+.register-inp{
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    margin-top: 20px;
+   
+}
+
+.user-icon{
+    width: 40px;
+    height: 40px;
+    color: rgba(210, 53, 165);
+    margin-top: 20px;
+}
+
+.register-title{
+    color: white;
+}
+
+.register-submit{
+  width: 70px;
+  height: 30px;
+  margin-top: 20px;
+  border: none;
+  background-color: rgba(210, 53, 165);
+  color: white;
+  cursor: pointer;
+}
+/* 
+::-webkit-input-placeholder{
+    color: white;
+} */

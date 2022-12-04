@@ -1,0 +1,43 @@
+
+
+.header-samall-user{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.btn-add-member{
+    border-radius: 15px;
+   background: transparent;
+   border: 2px dotted black;
+   width: 40px;
+   height: 40px;
+   font-size: 40px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.formMembersImputs{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+.formMembersImputs input {
+    margin: 10px 0px;
+  
+}
+
+.parent-small-user{
+    display: flex;
+    justify-content: flex-end;
+}
+

@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from 'react'
 import { AiOutlineClose } from "react-icons/ai";
 import ViewNewProject from './ViewNewProject';
 
-
 const getTaskfromLS = () => {
     const task = localStorage.getItem('Task');
     if (task) {

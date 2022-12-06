@@ -60,9 +60,6 @@ export default function Members() {
   return (
     <div>
        <Header users={users}/>
-              
-            
-
               <div className='add-member'>
   
                   <button className='btn-add-member' onClick={addMemberClick}>+</button>

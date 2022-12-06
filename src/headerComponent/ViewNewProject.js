@@ -1,26 +1,25 @@
-import React, { useCallback, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function ViewNewProject({ newtask }) {
-  const [changecolor, setChangeColor] = useState("#451252")
 
-  const handlechangecolor = useCallback(()=>{
-    const randomColor = '#' + Math.random().toString(14).slice(1,8);
-    setChangeColor(randomColor)
-    
-  },[changecolor])
+  const navigate= useNavigate()
+  const handlechangecolor = useCallback((id)=>{
+  navigate(`task/${id}`)
+  },[navigate])
+  
+
   return (
     <div>
       {newtask.map(task => (
-        <div key={task.id}>
-          <Link to="/Task">
-            <div   onCLick={handlechangecolor} style={{backgroundColor:`${changecolor}`}}>
+        <div key={task.id} >
+            <div onClick={event=>handlechangecolor(task.id)} >
             {task.id}
             {task.name}
             {task.startdate}
             {task.enddate}
             </div>
-          </Link>
+         
 
         </div>
       ))

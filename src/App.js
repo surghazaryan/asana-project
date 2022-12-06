@@ -1,20 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom"
-import Home from './components/Home';
-import Login from './components/Login';
-import Task from './headerComponent/Task';
+import Roting from './routing/routing';
+
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <Login/>
           <Routes>
           <Route path='/Login' element={<Login/>}/>
           <Route path="/Home" element={<Home/>}/>
           <Route path="/Task" element={<Task/>}/>
-          </Routes>
-      </BrowserRouter>
+        </Routes>
+
+    
+      </BrowserRouter> */}
+      <Roting/>
     </div>
   );
 }

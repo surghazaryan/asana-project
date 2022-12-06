@@ -3,19 +3,24 @@ import  { useState } from "react";
 import { useEffect } from "react";
 import { useCallback } from "react";
 import { FaRegUser } from "react-icons/fa"
-import Home from './Home';
+import { useNavigate } from 'react-router';
 import "./Login.css"
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
-    const [home, setshowHome] = useState(false)
     const localsignup = localStorage.getItem('email')
-  
+    const navigate = useNavigate()
+    // useEffect(()=>{
+    //   localStorage.setItem('email',JSON.stringify('garush@gmail.com'));
+    //   localStorage.setItem('password',JSON.stringify('garush44'));
+
+    // },[])
+
     useEffect(() => {
       if (localsignup) {
-        setshowHome(true)
+        navigate('/home')
       }
     })
     const handleSubmit = useCallback((e) => {
@@ -26,13 +31,12 @@ export default function Login() {
       if (email && password) {
         localStorage.setItem("email", JSON.stringify(email));
         localStorage.setItem("password", JSON.stringify(password));
-        window.location.reload()
+        
       }
     });
   return (
     <div>
         <div>
-        {home ? <Home/> :
           <form onSubmit={handleSubmit} className='Register-Form'>
             <div className="register-parent-input">
               <h1 className="register-title">Create Account</h1>
@@ -68,7 +72,6 @@ export default function Login() {
               <button className="register-submit">Login</button>
             </div>
           </form>
-        }
       </div>
     </div>
   )

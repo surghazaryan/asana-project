@@ -1,0 +1,94 @@
+.btn-add-member {
+    border-radius: 15px;
+    background: transparent;
+    border: 2px dotted black;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.formMembersImputs {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
+.formMembersImputs input {
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 3px solid rgba(210, 53, 165);
+    background-color: transparent;
+    outline: none;
+    height: 30px;
+}
+
+.member-hr {
+    width: 200px;
+    height: 2px;
+    background-color: rgba(210, 53, 165);
+}
+
+.parent-description {
+    line-height: 40px;
+}
+
+.parent-btn-title-member {
+    display: flex;
+    align-items: center;
+}
+
+.parent-btn-title-member label {
+    padding: 0px 20px;
+}
+
+.closIcon {
+    margin: 0px 200px;
+    cursor: pointer;
+}
+
+.parent-add-member {
+    width: 220px;
+}
+
+.btn-members {
+    background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 165));
+    border: none;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+}
+
+.view-member-parent-name-lastname {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.members-user-email {
+    margin-left: 45px;
+}
+
+.members-user-del {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    color: red;
+    border: none;
+}
+
+.user-small-title {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 165));
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}

@@ -1,0 +1,23 @@
+.header-samall-user {
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 125px;
+    background-color:  rgba(210, 53, 165);
+    color:white;
+    font-size: 20px;
+}
+
+.parent-small-user {
+    display: flex;
+    align-items: center;
+    height: 74px;
+    justify-content: space-evenly;
+   
+}
+

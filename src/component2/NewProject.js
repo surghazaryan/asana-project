@@ -10,62 +10,63 @@ const getTaskfromLS = () => {
     }
     else {
         return []
-    }
-}
+    };
+};
 export default function NewProject() {
     const [open, setIsopen] = useState(false);
-    const [name, setName] = useState('')
-    const [textarea, setTextarea] = useState('')
-    const [startdate, setStartDate] = useState('')
-    const [enddate, setendDate] = useState('')
+    const [name, setName] = useState('');
+    const [textarea, setTextarea] = useState('');
+    const [startdate, setStartDate] = useState('');
+    const [enddate, setendDate] = useState('');
     const [newtask, setNewtask] = useState(getTaskfromLS());
 
-    const closeIcon = <AiOutlineClose onClick={() => { setIsopen(!open) }} />
+    const closeIcon = <AiOutlineClose onClick={() => { setIsopen(!open) }} className='new-project-close' />
     const handleAddProject = useCallback((e) => {
-        e.preventDefault()
-        setIsopen(!open)
-    }, [])
+        e.preventDefault();
+        setIsopen(!open);
+    }, []);
 
     const handleAddUserSubmit = (e) => {
         e.preventDefault();
         let Task = {
-            id: Math.floor(Math.random() * 10)+1,
+            id: Math.floor(Math.random() * 10000) + 1,
             name,
             textarea,
             startdate,
             enddate,
-        }
-        setNewtask([...newtask,Task]);
+        };
+        setNewtask([...newtask, Task]);
         setName('');
         setTextarea('');
         setStartDate('');
         setendDate('');
-
-    }
-
+    };
     useEffect(() => {
         if (setName() !== '' && setTextarea() !== '' && setStartDate() !== '' && setendDate() !== '') {
             localStorage.setItem('Task', JSON.stringify(newtask));
         }
-    }, [newtask])
+    }, [newtask]);
 
-  return (
-    <div>
-       <button onClick={handleAddProject}>New Project</button>
-            {open ? 
+    return (
+        <div>
+            <div className="parent-new-project">
+                <div><h4>Project</h4></div>
+                <hr className='project-hr' />
+                <button onClick={handleAddProject} className='btn-new-project'>New Project</button>
+            </div>
+            {open ?
                 <div>
-                    <div>{closeIcon}</div>
-                    <form onSubmit={handleAddUserSubmit}>
+                    <div >{closeIcon}</div>
+                    <form onSubmit={handleAddUserSubmit} className='project-form'>
                         <input type="text" placeholder='name' value={name || ''} onChange={(e) => setName(e.target.value)} />
-                        <textarea placeholder='textarea' cols="0" rows="1" value={textarea} onChange={(e) => setTextarea(e.target.value)}></textarea>
+                        <textarea placeholder='description' value={textarea} onChange={(e) => setTextarea(e.target.value)}></textarea>
                         <input type="date" value={startdate || ''} onChange={(e) => setStartDate(e.target.value)} />
                         <input type="date" value={enddate || ''} onChange={(e) => setendDate(e.target.value)} />
-                        <button>send</button>
+                        <button className='btn-new-send-project'>send</button>
                     </form>
                 </div>
                 : ''}
-
             <ViewNewProject newtask={newtask} />
-    </div>
-  )
-}
+        </div>
+    );
+};

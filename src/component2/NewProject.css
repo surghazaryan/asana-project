@@ -1,0 +1,81 @@
+.container-home {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1174px;
+}
+
+.project-hr {
+    width: 200px;
+    height: 2px;
+    background-color: rgba(210, 53, 165);
+}
+
+.parent-new-project {
+    line-height: 50px;
+}
+
+.project-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-form input {
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 3px solid rgba(210, 53, 165);
+    ;
+    background-color: transparent;
+    outline: none;
+    height: 30px;
+}
+
+.project-form textarea {
+    resize: none;
+    border: 2px solid rgb(188, 35, 191);
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    background-color: rgb(188, 35, 191);
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn-new-project {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    border: 2px dashed black;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 26px;
+}
+
+.btn-new-send-project {
+    background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 165));
+    border: none;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+}
+
+.new-project-close {
+    position: absolute;
+    margin: 0px 191px;
+    cursor: pointer;
+}
+
+.created-new-project {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 165));
+    font-size: 14px;
+    border-radius: 15px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+}
